@@ -10,5 +10,10 @@ def hello():
 def user(username):
     return render_template("user.html", username=username)
 
+@app.route("/fruits")
+def fruits():
+    fruits = ["사과", "배", "딸기", "포도"]
+    return render_template("fruits.html", fruits=fruits)
+
 if __name__ == "__main__":
     app.run(debug=True)
